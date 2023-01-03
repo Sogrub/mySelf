@@ -1,77 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .header-container {
-    display: flex;
-    width: 100%;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  background: #000;
+  padding: 0 2rem;
 
-.background {
-    position: fixed;
+  .logo:visited,
+  .logo:active,
+  .logo:checked,
+  .logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: fantasy, sans-serif;
+  }
+
+  span {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+  .menu-container {
+    display: flex;
+    position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 35%;
     height: 100%;
-    background: url("https://images.unsplash.com/photo-1617042375876-a13e36732a04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGRldmVsb3BlcnxlbnwwfHwwfHw%3D&w=1000&q=80");
-    background-repeat: no-repeat;
-    background-size: cover;
+    border-radius: 1rem;
+    background: #09c0fa;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transform-origin: top right;
+    z-index: -1;
     transition: 1s;
 
-    .logo:link,
-    .logo:visited,
-    .logo:active {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        cursor: default;
-        font-size: 12vw;
-        font-weight: 700;
-        color: #fff;
-        text-decoration: none;
-        transition: 1s;
-    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      height: auto;
 
-    span {
-        position: absolute;
-        top: 25%;
-        right: 5%;
-        height: 3rem;
-        width: 3rem;
-        cursor: pointer;
-    }
-}
-
-.sticky {
-    position: sticky;
-    justify-content: flex-start;
-    height: 5rem !important;
-    padding: 0 2rem;
-    opacity: .8;
-
-    .logo:link,
-    .logo:visited,
-    .logo:active {
-        position: absolute;
-        left: 10%;
-        transform: translate(0, -50%);
+      p {
+        margin: 2rem 0;
         font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        transition: 1s;
+        &:hover {
+          transform: scale(1.5);
+          text-decoration: underline;
+        }
+      }
     }
+  }
 }
 
 .ng-tns-c14-1 {
-    display: none;
+  display: none;
 }
 
 .ng-tns-c14-2 {
-    rotate: 45deg;
-    transform-origin: 15% 35%;
+  rotate: 45deg;
+  transform-origin: 15% 35%;
 }
 
 .ng-tns-c14-3 {
-    rotate: -45deg;
-    transform-origin: 15% 65%;
+  rotate: -45deg;
+  transform-origin: 15% 65%;
 }

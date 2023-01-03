@@ -5,36 +5,20 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild }
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.scss']
 })
-export class MainHeaderComponent implements OnInit, AfterViewInit {
+export class MainHeaderComponent {
   @ViewChild('main') main!: ElementRef;
-  @ViewChild('header') header!: ElementRef;
+  @ViewChild('menuContainer') menuContainer!: ElementRef;
 
   toggleActive: boolean = false;
-  menuActive: boolean = false;
 
-  @HostListener('window:resize')
-  onResize() {
-    this.main.nativeElement.style.height = window.innerHeight + 'px';
-  }
+  constructor() {}
 
-  @HostListener("window:scroll", ['$event'])
-  onScroll(){
-    this.header.nativeElement.classList.toggle('sticky', window.scrollY > 0);
-    if (window.scrollY > 0) {
-      this.menuActive = true;
+  openMenu() {
+    this.toggleActive = !this.toggleActive;
+    if ( this.toggleActive) {
+      this.menuContainer.nativeElement.style.transform = 'scale(1)'
     } else {
-      this.menuActive = false;
+      this.menuContainer.nativeElement.style.transform = 'scale(0)'
     }
   }
-
-  constructor() { 
-    
-  }
-  ngAfterViewInit(): void {
-    this.main.nativeElement.style.height = window.innerHeight + 'px';
-  }
-
-  ngOnInit(): void {
-  }
-
 }
