@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  background: #000;
+  background: #020202;
   padding: 0 2rem;
 
   .logo:visited,
@@ -12,7 +12,7 @@
   .logo {
     font-size: 2rem;
     text-decoration: none;
-    color: #fff;
+    color: #9ae5f3;
     font-family: fantasy, sans-serif;
   }
 
@@ -31,7 +31,7 @@
     width: 35%;
     height: 100%;
     border-radius: 1rem;
-    background: #09c0fa;
+    background: #373739;
     align-items: center;
     justify-content: center;
     transform: scale(0);
@@ -47,7 +47,7 @@
       p {
         margin: 2rem 0;
         font-size: 2rem;
-        color: #fff;
+        color: #9ae5f3;
         cursor: pointer;
         transition: 1s;
         &:hover {
